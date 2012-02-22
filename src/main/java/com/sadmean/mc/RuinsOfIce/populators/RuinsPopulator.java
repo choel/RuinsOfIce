@@ -9,10 +9,12 @@ import org.bukkit.World;
 import org.bukkit.block.BlockFace;
 import org.bukkit.generator.BlockPopulator;
 
+import com.sadmean.mc.RuinsOfIce.RuinsOfIce;
+
 //THIS CLASS BORROWED FROM BANANAMAZE. THANKS BANANA!! (I didn't ask, does that make me a bad person. YES YES IT DOES)
 public class RuinsPopulator extends BlockPopulator {
-	public static final int MAX_RUINS = 3;
-	public static final int RUINS_CHANCE = 60;
+	public static final int MAX_RUINS = RuinsOfIce.populator_ruins_ruinsChance;
+	public static final int RUINS_CHANCE = RuinsOfIce.populator_ruins_ruinsChance;
 	public static final Material RUINS_MATERIAL = Material.ICE;
 	public static final BlockFace[] directions = new BlockFace[] {
 			BlockFace.NORTH, BlockFace.SOUTH, BlockFace.EAST, BlockFace.WEST };

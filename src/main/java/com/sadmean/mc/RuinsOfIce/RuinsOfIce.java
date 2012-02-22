@@ -20,6 +20,14 @@ public class RuinsOfIce extends JavaPlugin {
 	//settings - to be set by Config.load();
 	public static boolean alwaysSnowing = true;
 	public static boolean BedrockFloor = true;
+	public static boolean populator_treasure_allowUnobtainableItems;
+	public static int populator_treasure_chestChance;
+	public static int populator_treasure_commonChance;
+	public static int populator_treasure_uncommonChance;
+	public static int populator_treasure_rareChance;
+	public static int populator_treasure_epicChance;
+	public static int populator_ruins_maxRuins;
+	public static int populator_ruins_ruinsChance;
 	
 	public void onDisable() {
 		log_It("info", "Disable completed");

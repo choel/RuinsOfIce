@@ -10,7 +10,7 @@ import org.bukkit.World;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
 
-import com.sadmean.mc.RuinsOfIce.populators.ChestPopulator;
+//import com.sadmean.mc.RuinsOfIce.populators.ChestPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.IceFortressRuinsPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.OrePopulator;
 import com.sadmean.mc.RuinsOfIce.populators.RuinsPopulator;

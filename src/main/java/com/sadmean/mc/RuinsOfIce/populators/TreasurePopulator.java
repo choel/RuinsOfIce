@@ -12,14 +12,16 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.inventory.ItemStack;
 
+import com.sadmean.mc.RuinsOfIce.RuinsOfIce;
+
 public class TreasurePopulator extends BlockPopulator {
 	
-	public static int chestChance = 7;
+	public static int chestChance = RuinsOfIce.populator_treasure_chestChance;
 	//item chances
-	public static int commonChance = 100;
-	public static int uncommonChance = 30;
-	public static int rareChance = 12;
-	public static int epicChance = 0;
+	public static int commonChance = RuinsOfIce.populator_treasure_commonChance;
+	public static int uncommonChance = RuinsOfIce.populator_treasure_uncommonChance;
+	public static int rareChance = RuinsOfIce.populator_treasure_rareChance;
+	public static int epicChance = RuinsOfIce.populator_treasure_epicChance;
 	//item arrays
 	ItemStack[] commonRewards;
 	ItemStack[] uncommonRewards;
