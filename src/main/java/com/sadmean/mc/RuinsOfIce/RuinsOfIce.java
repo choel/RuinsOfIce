@@ -1,8 +1,10 @@
 package com.sadmean.mc.RuinsOfIce;
 
 import java.io.File;
+import java.util.List;
 import java.util.logging.Logger;
 
+import org.bukkit.World;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,17 +19,24 @@ public class RuinsOfIce extends JavaPlugin {
 	static public File configFile = new File(mainDirectory + File.separator + "config.yml");
 	private static final RuinsOfIceGenerator gen = new RuinsOfIceGenerator();
 	public static boolean simplemode = false;
+	public static List<World> IceWorlds;
+	int taskID = -2;
 	//settings - to be set by Config.load();
 	public static boolean alwaysSnowing = true;
 	public static boolean BedrockFloor = true;
+	//populator settings
+	//treasure settings
 	public static boolean populator_treasure_allowUnobtainableItems;
 	public static int populator_treasure_chestChance;
 	public static int populator_treasure_commonChance;
 	public static int populator_treasure_uncommonChance;
 	public static int populator_treasure_rareChance;
 	public static int populator_treasure_epicChance;
+	//ruins settings
 	public static int populator_ruins_maxRuins;
 	public static int populator_ruins_ruinsChance;
+	//plants settings
+	public static int populator_tree_bushChance;
 	
 	public void onDisable() {
 		log_It("info", "Disable completed");
@@ -35,8 +44,23 @@ public class RuinsOfIce extends JavaPlugin {
 	}
 
 	public void onEnable() {
-		log_It("info", "Enable started");
 		Config.load();
+		getServer().getPluginManager().registerEvents(new WorldHandler(), this);
+		
+		taskID = getThisPlugin().getServer().getScheduler().scheduleSyncRepeatingTask(getThisPlugin(), new Runnable() {
+			
+			public void run() {
+				if(IceWorlds.isEmpty()) {
+					return;
+				}
+				int i = 0;
+				while(i < IceWorlds.size()) {
+					WorldHandler.UpdateWorld(IceWorlds.get(i));
+				}
+			}
+			
+		}, 60L, 300L);
+		
 		log_It("info", "Enabled finished");
 	}
 	
@@ -97,6 +121,30 @@ public class RuinsOfIce extends JavaPlugin {
 		default: log.warning(fullName + "warning defaulted, maybe a typo: " + message); //also for me, because I spelled the logging level wrong
 			break;
 		}
+	}
+
+	
+	//Iceworlds list getter/setter
+	public static void add(World world) {
+		if(!IceWorlds.contains(world)) {
+			IceWorlds.add(world);
+		}
+		
+	}
+
+	public static boolean contains(World world) {
+		if(IceWorlds.contains(world)) {
+			return true;
+		} else{
+			return false;
+		}
+	}
+
+	public static void remove(World world) {
+		if(IceWorlds.contains(world)) {
+			IceWorlds.remove(world);
+		}
+		
 	}
 
 

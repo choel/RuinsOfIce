@@ -8,6 +8,12 @@ import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.generator.BlockPopulator;
 
+/**
+ * 
+ * @author Choel
+ * Forms random ice formations
+ * 
+ */
 public class IceFortressRuinsPopulator extends BlockPopulator {
 
 	public static final int maxPillarHeight = 16;

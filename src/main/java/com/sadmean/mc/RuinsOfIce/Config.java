@@ -53,6 +53,12 @@ public class Config {
 			config.set("populators.treasure.uncommonChance", RuinsOfIce.populator_treasure_uncommonChance); 
 		}
 		
+		if(config.contains("populators.tree.bushChance")) {
+			RuinsOfIce.populator_tree_bushChance = config.getInt("populators.tree.bushChance", 30);
+		} else {
+			config.set("populators.tree.bushChance", RuinsOfIce.populator_tree_bushChance); 
+		}
+		
 		if(config.contains("populators.treasure.rareChance")) {
 			RuinsOfIce.populator_treasure_rareChance = config.getInt("populators.treasure.rareChance", 12);
 		} else {

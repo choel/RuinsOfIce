@@ -10,6 +10,11 @@ import org.bukkit.generator.BlockPopulator;
 
 import com.sadmean.mc.RuinsOfIce.RuinsOfIce;
 
+/**
+ * 
+ * @author Choel
+ * Populates world with ore. Has no respect to other blocks.
+ */
 public class OrePopulator extends BlockPopulator {
 
 	@Override
@@ -92,6 +97,13 @@ public class OrePopulator extends BlockPopulator {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param type Material to make a vein of
+	 * @param size How many blocks the vein should be
+	 * @param target source block of vein
+	 * @param rand the random object passed as part of the chunk generator
+	 */
 	private void makeAVein(Material type, int size, Location target, Random rand) {
 		if(RuinsOfIce.simplemode) {
 			return;

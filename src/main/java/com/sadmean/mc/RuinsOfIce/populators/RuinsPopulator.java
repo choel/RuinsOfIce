@@ -12,6 +12,11 @@ import org.bukkit.generator.BlockPopulator;
 import com.sadmean.mc.RuinsOfIce.RuinsOfIce;
 
 //THIS CLASS BORROWED FROM BANANAMAZE. THANKS BANANA!! (I didn't ask, does that make me a bad person. YES YES IT DOES)
+/**
+ * @author Banana
+ * This is borrowed from BananaMaze, and should no longer be used.
+ * @deprecated
+ */
 public class RuinsPopulator extends BlockPopulator {
 	public static final int MAX_RUINS = RuinsOfIce.populator_ruins_ruinsChance;
 	public static final int RUINS_CHANCE = RuinsOfIce.populator_ruins_ruinsChance;

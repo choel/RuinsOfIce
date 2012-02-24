@@ -10,13 +10,14 @@ import org.bukkit.World;
 import org.bukkit.generator.BlockPopulator;
 import org.bukkit.generator.ChunkGenerator;
 
-//import com.sadmean.mc.RuinsOfIce.populators.ChestPopulator;
+import com.sadmean.mc.RuinsOfIce.populators.ChestPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.IceFortressRuinsPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.OrePopulator;
 import com.sadmean.mc.RuinsOfIce.populators.RuinsPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.SnowmanPopulator;
 import com.sadmean.mc.RuinsOfIce.populators.TreasurePopulator;
 import com.sadmean.mc.RuinsOfIce.populators.TreePopulator;
+import com.sadmean.mc.RuinsOfIce.populators.SnowPopulator;
 
 public class RuinsOfIceGenerator extends ChunkGenerator {
 
@@ -24,7 +25,7 @@ public class RuinsOfIceGenerator extends ChunkGenerator {
 	 public List<BlockPopulator> getDefaultPopulators(World world) {
 		 return Arrays.asList(new TreePopulator(), new SnowmanPopulator(),
 				 new OrePopulator(), new RuinsPopulator(), 
-				 new IceFortressRuinsPopulator(), new TreasurePopulator());
+				 new IceFortressRuinsPopulator(), new TreasurePopulator(), new SnowPopulator());
 	 }
 	
 	

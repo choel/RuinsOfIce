@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 
 /**
  * This class is no longer used. It has been replaced with TreasurePopulator. We will save it, as it might be useful someday.
+ * @deprecated
  */
 public class ChestPopulator extends BlockPopulator {
 	public static final int CHANCE_OF_CHEST = 10;
